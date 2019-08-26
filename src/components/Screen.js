@@ -13,5 +13,7 @@ const styles = StyleSheet.create({
   wrapper: {
     backgroundColor: BLUE,
     flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 });

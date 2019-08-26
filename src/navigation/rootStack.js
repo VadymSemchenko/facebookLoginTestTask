@@ -14,6 +14,7 @@ export default createStackNavigator(
     initialRouteName: LOGIN,
     defaultNavigationOptions: {
       header: null,
+      gesturesEnabled: false,
     },
   },
 );
