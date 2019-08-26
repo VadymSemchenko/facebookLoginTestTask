@@ -19,7 +19,7 @@ export default ({navigation}) => {
       const {accessToken} = await AccessToken.getCurrentAccessToken();
       !!accessToken && setToken(accessToken);
     } catch (error) {
-      alert('Token extraction went wrong');
+      alert('Login unsuccessful.');
     }
   };
   const loginCallBack = (error, result) => {
