@@ -1,0 +1,31 @@
+{
+  "name": "facebookLoginTestTask",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start --reset-cache",
+    "lint": "eslint .",
+    "clean": "rm -rf $TMPDIR/metro-* && rm -rf $TMPDIR/haste-* && rm -rf $TMPDIR/react-* && watchman watch-del-all && yarn cache clean --force",
+    "stop": "lsof -n -i4TCP:8081 | sed '1 d' | awk '{print $2}' | xargs kill -9",
+    "se": "yarn clean && yarn clean-ios && node node_modules/react-native/local-cli/cli.js run-ios --simulator=\"iPhone SE (12.4)\"",
+    "xs": "yarn clean && yarn clean-ios && node node_modules/react-native/local-cli/cli.js run-ios --simulator=\"iPhone Xs (12.4)\"",
+    "clean-ios": "rm -rf ios/build"
+  },
+  "dependencies": {
+    "react": "16.8.6",
+    "react-native": "0.60.5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/runtime": "^7.5.5",
+    "@react-native-community/eslint-config": "^0.0.5",
+    "babel-jest": "^24.9.0",
+    "eslint": "^6.2.2",
+    "jest": "^24.9.0",
+    "metro-react-native-babel-preset": "^0.56.0",
+    "react-test-renderer": "16.8.6"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
