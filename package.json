@@ -9,11 +9,15 @@
     "stop": "lsof -n -i4TCP:8081 | sed '1 d' | awk '{print $2}' | xargs kill -9",
     "se": "yarn clean && yarn clean-ios && node node_modules/react-native/local-cli/cli.js run-ios --simulator=\"iPhone SE (12.4)\"",
     "xs": "yarn clean && yarn clean-ios && node node_modules/react-native/local-cli/cli.js run-ios --simulator=\"iPhone Xs (12.4)\"",
-    "clean-ios": "rm -rf ios/build"
+    "clean-ios": "rm -rf ios/build",
+    "pod-install": "cd ios && pod install && cd .."
   },
   "dependencies": {
     "react": "16.8.6",
-    "react-native": "0.60.5"
+    "react-native": "0.60.5",
+    "react-native-gesture-handler": "^1.4.1",
+    "react-native-reanimated": "^1.2.0",
+    "react-navigation": "^3.12.1"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
